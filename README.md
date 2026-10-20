@@ -1,99 +1,156 @@
 # Melanie Perkins — Entrepreneur Showcase
 
-An editorial-style, responsive React website for the EDC JSS University entrepreneur showcase assignment.
+An editorial-style, responsive React website created for the EDC JSS University entrepreneur showcase assignment. It explores Melanie Perkins' entrepreneurial journey, from identifying a design-accessibility problem to building Canva.
 
 ## Features
 
-- Introductory profile and original CSS-built abstract artwork (no external image assets required).
+- Editorial-style cover featuring Melanie Perkins and CSS-built abstract artwork.
 - Interactive chronological timeline with five milestones.
-- Clickable venture cards for Fusion Books and Canva; each opens a detail dialog.
-- Impact section and practical entrepreneurship takeaways.
-- Source modal with links to company and independent references.
+- Mobile-friendly timeline selection for exploring key milestones.
+- Interactive venture cards for Fusion Books and Canva, each opening a detail dialog.
+- Impact section highlighting entrepreneurial lessons and takeaways.
+- Personal reflection on the founder's journey.
+- Sources modal with company and independent references.
 - Responsive navigation and layouts for mobile, tablet, and desktop.
-- Accessible interaction basics: semantic buttons, tab roles, dialog labels, and reduced-motion support.
-- Timeline and venture content are generated from structured JavaScript arrays.
+- Accessibility basics, including semantic buttons, dialog labels, keyboard focus styles, and reduced-motion support.
+- Data-driven timeline and venture cards generated from structured JavaScript arrays.
 
-## Tech stack
+## Tech Stack
 
 - React
 - Vite
+- JavaScript
 - CSS
 - Lucide React icons
 
-## Run locally
+## Getting Started
 
-You need Node.js (LTS recommended) and npm installed.
+### Prerequisites
+
+Install [Node.js](https://nodejs.org/) (LTS recommended), which includes npm.
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+Navigate to the project directory:
+
+```bash
+cd melanie_perkins_showcase
+```
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Open the local URL printed by Vite, usually `http://localhost:5173`.
+Open the local URL printed in your terminal, usually `http://localhost:5173`.
 
-To create a production build:
+### Production Build
+
+Create an optimised production build:
 
 ```bash
 npm run build
+```
+
+Preview the production build locally:
+
+```bash
 npm run preview
 ```
 
-## Project structure
+## Project Structure
 
 ```text
-melanie-perkins-showcase/
+melanie_perkins_showcase/
+├── public/
+│   └── images/
+│       └── melanie-perkins-cutout.png
+├── src/
+│   ├── main.jsx
+│   └── styles.css
 ├── index.html
 ├── package.json
-├── README.md
-└── src/
-    ├── main.jsx
-    └── styles.css
+├── package-lock.json
+└── README.md
 ```
 
-## Data-driven implementation
+*Note: Update the structure and image filename above if they differ from your actual project.*
 
-The timeline is stored in the `milestones` array in `src/main.jsx`. Each object contains a year, label, title, explanatory text, takeaway, and source ID. The interface maps over the array to create the timeline buttons and updates the selected milestone using React state.
+## Implementation Highlights
 
-The `ventures` array similarly stores the venture cards. The card layout is generated with `.map()`, and selecting a card opens a reusable detail dialog. This meets the assignment requirement for a section generated from structured data.
+### Data-Driven Components
 
-## Research and source notes
+The timeline is stored in the `milestones` array in `src/main.jsx`. Each milestone contains information such as its year, label, title, explanatory text, takeaway, and source ID. React maps over this array to generate the timeline controls and displays the selected milestone using component state.
 
-The showcase is a concise student research project, not a full biography. It uses first-person company material for the founding story and supplements it with independent reporting / biographical material.
+The `ventures` array stores the information for the Fusion Books and Canva cards. The cards are generated using `.map()`, and selecting a card opens a reusable detail dialog.
 
-1. Canva Newsroom, “21 Questions from Aussie Startups: Highs, lows & lessons learned during Canva’s journey so far (Part 1)”  
+### Responsive Design
+
+The website uses CSS media queries to adapt its layout to desktop, tablet, and mobile screens. The responsive interface includes mobile navigation and a compact timeline selection layout.
+
+### Visual Design
+
+The website uses an editorial magazine-inspired visual style, combining serif headlines, muted green and cream colours, CSS-built geometric artwork, and a founder portrait.
+
+## Research and References
+
+The showcase uses first-person company material alongside independent reporting and biographical sources.
+
+1. **Canva Newsroom** — *21 Questions from Aussie Startups: Highs, lows & lessons learned during Canva’s journey so far (Part 1)*  
    https://www.canva.com/newsroom/news/melanie-perkins-21-questions-part-1/
-2. Canva Press Hub, “Company information”  
+
+2. **Canva Press Hub** — *Company information*  
    https://public.canva.site/canva-press-hub-company-information
-3. SBS News, “How Canva cracked the multi-million dollar mark”  
+
+3. **SBS News** — *How Canva cracked the multi-million dollar mark*  
    https://www.sbs.com.au/news/small-business-secrets/article/how-canva-cracked-the-multi-million-dollar-mark/d28w8w9bp
-4. Global Business Hall of Fame, “Melanie Perkins”  
+
+4. **Global Business Hall of Fame** — *Melanie Perkins*  
    https://www.businesshalloffame.org/melanie-perkins
-5. Canva Newsroom, “Canva Co-Founder Cameron Adams’ biggest lessons”  
+
+5. **Canva Newsroom** — *Canva Co-Founder Cameron Adams' biggest lessons*  
    https://www.canva.com/newsroom/news/canva-founder-cameron-adams-biggest-lessons/
 
-### Accuracy note
+## Research and Accuracy Notes
 
-- The early teaching insight and Fusion Books story are grounded primarily in Perkins’ first-person account.
-- The site groups several developments into a 2011–12 milestone; it does not claim that every team or fundraising event occurred in a single year.
-- Current company-scale statistics are intentionally omitted because they change over time and are not necessary to the core story.
-- The artwork is original CSS illustration, not a photograph of Melanie Perkins. This avoids presenting an unverified portrait as authentic.
+- The early teaching insight and Fusion Books story are based primarily on Melanie Perkins' first-person account.
+- The 2011–12 timeline entry groups several team-building and fundraising developments rather than attributing every event to one specific year.
+- Current company-scale statistics are omitted because they change over time and are not essential to the central entrepreneurial story.
+- The founder portrait should be appropriately credited, and its source and usage permissions should be checked.
 
-## AI-use disclosure
+## AI Use Disclosure
 
-Suggested disclosure for submission:
+AI assistance was used to help draft and organise parts of the React component structure, CSS styling, interaction logic, README, and research starting points. The final disclosure should reflect the work actually completed, including any code review, modifications, testing, and factual verification personally performed.
 
-> AI assistance was used to help draft and organise the initial React component structure, CSS styling, interaction logic, README, and research starting points. I reviewed the generated code, tested the interactions locally, and am responsible for checking factual claims, understanding the implementation, and making any final changes before submission. The visuals are CSS-created illustrations rather than AI-generated or misattributed photographs.
+## Final Verification Checklist
 
-Edit this statement to accurately reflect the tools you actually used and the checks you personally completed. Do not claim testing or verification you have not done.
+- [ ] Install dependencies and run the development server.
+- [ ] Test all five timeline milestones.
+- [ ] Open both venture cards and verify their detail dialogs.
+- [ ] Open the Sources modal and verify the reference links.
+- [ ] Test the mobile navigation and timeline selection.
+- [ ] Check the layout on mobile and desktop screens.
+- [ ] Confirm that the founder portrait loads correctly.
+- [ ] Run `npm run build` and verify that it completes successfully.
+- [ ] Check that no secrets or environment files are committed.
+- [ ] Verify the GitHub repository and add a live demo link if available.
+- [ ] Ensure the AI-use disclosure accurately represents the work completed.
 
-## Before submitting
+---
 
-- [ ] Run `npm install` and `npm run dev`.
-- [ ] Click every timeline milestone and both venture cards.
-- [ ] Open the Sources modal and verify each link.
-- [ ] Check the layout at mobile and desktop widths.
-- [ ] Run `npm run build` and confirm it completes successfully.
-- [ ] Add the project to your own GitHub repository.
-- [ ] Update this README with your name, repository link, and any changes you made.
-- [ ] Be prepared to explain `useState`, `.map()`, the structured arrays, and the modal logic.
-- [ ] Adjust the AI-use disclosure so it accurately reflects your work.
+**Created for:** EDC Entrepreneur Showcase  
+**Institution:** JSS University, Noida  
+**Project:** Melanie Perkins — Entrepreneur Showcase
